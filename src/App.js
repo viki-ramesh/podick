@@ -81,7 +81,7 @@ function App() {
     if (metamaskConfig.isMetamaskInstalled) {
       const chainId = await metamaskConfig.getChainId()
 
-      if (parseInt(chainId, 16) !== 97) {
+      if (parseInt(chainId, 16) !== 56) {
         alert("Please Connect on BSC Smart Chain")
         return
       } else {
