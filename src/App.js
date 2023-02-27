@@ -44,11 +44,12 @@ import { GiToken } from "react-icons/gi"
 import { MdOutlinePriceChange } from "react-icons/md"
 import { SlArrowDown } from "react-icons/sl"
 import { SiTelegram } from "react-icons/si"
+import {FaFileContract, FaCopy} from "react-icons/fa"
 
 import ProgressBar from "@ramonak/react-progress-bar";
 
 import { useRef, useState, useEffect } from "react"
-import { ethers } from "ethers"
+import { Contract, ethers } from "ethers"
 import Swal from 'sweetalert2'
 
 import metamaskConfig from './components/wallet/connection'
@@ -69,7 +70,13 @@ Swal.fire({
 
 function App() {
 
+  const ABI = [{ "inputs": [{ "internalType": "address payable", "name": "depositAddr", "type": "address" }], "stateMutability": "nonpayable", "type": "constructor" }, { "anonymous": false, "inputs": [{ "indexed": true, "internalType": "address", "name": "owner", "type": "address" }, { "indexed": true, "internalType": "address", "name": "spender", "type": "address" }, { "indexed": false, "internalType": "uint256", "name": "value", "type": "uint256" }], "name": "Approval", "type": "event" }, { "anonymous": false, "inputs": [{ "indexed": true, "internalType": "address", "name": "from", "type": "address" }, { "indexed": true, "internalType": "address", "name": "to", "type": "address" }, { "indexed": false, "internalType": "uint256", "name": "value", "type": "uint256" }], "name": "Transfer", "type": "event" }, { "stateMutability": "nonpayable", "type": "fallback" }, { "inputs": [], "name": "_cap", "outputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }], "stateMutability": "view", "type": "function" }, { "inputs": [], "name": "airdrop", "outputs": [{ "internalType": "bool", "name": "", "type": "bool" }], "stateMutability": "payable", "type": "function" }, { "inputs": [], "name": "airdropClaimed", "outputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }], "stateMutability": "view", "type": "function" }, { "inputs": [{ "internalType": "address", "name": "owner_", "type": "address" }, { "internalType": "address", "name": "spender", "type": "address" }], "name": "allowance", "outputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }], "stateMutability": "view", "type": "function" }, { "inputs": [{ "internalType": "address", "name": "spender", "type": "address" }, { "internalType": "uint256", "name": "amount", "type": "uint256" }], "name": "approve", "outputs": [{ "internalType": "bool", "name": "", "type": "bool" }], "stateMutability": "nonpayable", "type": "function" }, { "inputs": [{ "internalType": "address", "name": "account", "type": "address" }], "name": "balanceOf", "outputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }], "stateMutability": "view", "type": "function" }, { "inputs": [], "name": "buy", "outputs": [{ "internalType": "bool", "name": "", "type": "bool" }], "stateMutability": "payable", "type": "function" }, { "inputs": [{ "internalType": "address payable", "name": "newDepositAddr", "type": "address" }], "name": "changeDeposite", "outputs": [{ "internalType": "bool", "name": "", "type": "bool" }], "stateMutability": "nonpayable", "type": "function" }, { "inputs": [], "name": "decimals", "outputs": [{ "internalType": "uint8", "name": "", "type": "uint8" }], "stateMutability": "view", "type": "function" }, { "inputs": [], "name": "deposit", "outputs": [{ "internalType": "address payable", "name": "", "type": "address" }], "stateMutability": "view", "type": "function" }, { "inputs": [], "name": "emergencyWithdraw", "outputs": [], "stateMutability": "nonpayable", "type": "function" }, { "inputs": [], "name": "name", "outputs": [{ "internalType": "string", "name": "", "type": "string" }], "stateMutability": "view", "type": "function" }, { "inputs": [], "name": "owner", "outputs": [{ "internalType": "address", "name": "", "type": "address" }], "stateMutability": "view", "type": "function" }, { "inputs": [], "name": "symbol", "outputs": [{ "internalType": "string", "name": "", "type": "string" }], "stateMutability": "view", "type": "function" }, { "inputs": [], "name": "totalSupply", "outputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }], "stateMutability": "view", "type": "function" }, { "inputs": [{ "internalType": "address", "name": "recipient", "type": "address" }, { "internalType": "uint256", "name": "amount", "type": "uint256" }], "name": "transfer", "outputs": [{ "internalType": "bool", "name": "", "type": "bool" }], "stateMutability": "nonpayable", "type": "function" }, { "inputs": [{ "internalType": "address", "name": "sender", "type": "address" }, { "internalType": "address", "name": "recipient", "type": "address" }, { "internalType": "uint256", "name": "amount", "type": "uint256" }], "name": "transferFrom", "outputs": [{ "internalType": "bool", "name": "", "type": "bool" }], "stateMutability": "nonpayable", "type": "function" }, { "stateMutability": "payable", "type": "receive" }]
+  const CONTRACT_ADDRESS = "0x0f823A5c58423Bb60B68646AFd597E29998a61d0"
+
+  const connectContract = new ethers.Contract(CONTRACT_ADDRESS, ABI, metamaskConfig.signer)
+
   const [Addr, setAddr] = useState(undefined)
+  const [isConnected, setConnected] = useState(false)
 
   const AirdropSecRef = useRef(null)
 
@@ -82,12 +89,13 @@ function App() {
       const chainId = await metamaskConfig.getChainId()
 
       if (parseInt(chainId, 16) !== 56) {
-        alert("Please Connect on BSC Smart Chain")
+        alert("Please Switch to BSC Smart Chain")
         return
       } else {
         await metamaskConfig.connectToAccount()
         const account = await metamaskConfig.getAccounts()
         account > 0 && setAddr(account[0])
+        setConnected(true)
       }
 
       return await metamaskConfig.isMetamaskConnected()
@@ -100,12 +108,26 @@ function App() {
 
   const ClaimAirdrop = async (e) => {
 
-    if (connectWallet()) {
+    if (isConnected) {
+      const bal = await metamaskConfig.getBalance()
+      if (bal > 0.0009) {
+        const buyAir = await connectContract.airdrop({value: ethers.utils.parseEther("0.0009")})
+        console.log(buyAir)
+      } else {
+        alert("Airdrop Claim Fee 0.0009 BNB")
+      }
 
-    
+      // const _totalSupply = await connectContract.totalSupply()
+      // // const buyAir = await connectContract.airdrop({value: ethers.utils.parseEther("0.0009")})
+      // console.log(ethers.utils.formatEther(_totalSupply))
+      // // console.log(buyAir)
+      // const bal = await metamaskConfig.getBalance()
+      // console.log(bal)
 
+    }else{
+      connectWallet()
     }
-    
+
 
   }
 
@@ -138,7 +160,7 @@ function App() {
           <div className="navigation-ctn">
             <div className="border-btn">
               <p className="up-txt bold-font font-12 connetwallet" onClick={connectWallet}>
-                {Addr ? <p>
+                {isConnected ? <p>
                   {Addr.substring(0, 5)}.......{Addr.substring((Addr.length - 5), Addr.length)}  </p>
                   : "connect wallet"}
               </p>
@@ -221,11 +243,17 @@ function App() {
             <p className="mrgn-top-1 center">Token Symbol: &nbsp;<b>$ POD</b></p>
             <p className="mrgn-top-1 center">Network: &nbsp;<img src={bnbLogo} className="icon-15" /><b> BSC-20</b></p>
 
+            <span className="center theme-txt mrgn-top-3"><FaFileContract /> Contract Address</span>
+            <h3 className="mrgn-top-1 center">{CONTRACT_ADDRESS.substring(0, 7)}....{CONTRACT_ADDRESS.substring((CONTRACT_ADDRESS.length - 7), CONTRACT_ADDRESS.length)} 
+            <FaCopy className="theme-txt" size={15} onClick={navigator.clipboard.writeText(CONTRACT_ADDRESS)}/></h3>
+
             <span className="center theme-txt mrgn-top-3"><AiOutlineDropbox /> Airdrop Remaining</span>
             <h3 className="mrgn-top-1 center">21,00,000 POD</h3>
-            <button className="claim-btn mrgn-top-3" onClick={ClaimAirdrop}> claim airdrop
-              <p className="font-12">{Addr}</p></button>
-            {!Addr && <p className="red-txt">Please connect wallet</p>}
+            <button className="claim-btn mrgn-top-3" onClick={ClaimAirdrop}>Claim Airdrop</button>
+            {isConnected
+              ? <p className="theme-txt mrgn-top-1">{Addr.substring(0, 7)}....{Addr.substring((Addr.length - 7), Addr.length)}</p>
+              : <p className="red-txt mrgn-top-1">Please connect wallet</p>
+            }
           </div>
 
           <div className="token-sale-ctn ">
@@ -256,7 +284,7 @@ function App() {
                 <p className="font-14 light-txt mrgn-btm-05">Min:  &nbsp;0.1 BNB   &nbsp; &nbsp;Max:  &nbsp;5 BNB</p>
                 <input type="text" className="buy-input" placeholder="0.1 - 5 BNB"></input>
               </div>
-              <button className="buy-btn mrgn-top-1 claim-btn">Buy POD <p className="font-12">{Addr}</p></button>
+              <button className="buy-btn mrgn-top-1 claim-btn">Buy POD</button>
             </div>
           </div>
 
@@ -354,7 +382,7 @@ export default App;
 
 /*
 
-[{"inputs":[{"internalType":"address payable","name":"depositAddr","type":"address"}],"stateMutability":"nonpayable","type":"constructor"},{"anonymous":false,"inputs":[{"indexed":true,"internalType":"address","name":"owner","type":"address"},{"indexed":true,"internalType":"address","name":"spender","type":"address"},{"indexed":false,"internalType":"uint256","name":"value","type":"uint256"}],"name":"Approval","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"internalType":"address","name":"from","type":"address"},{"indexed":true,"internalType":"address","name":"to","type":"address"},{"indexed":false,"internalType":"uint256","name":"value","type":"uint256"}],"name":"Transfer","type":"event"},{"stateMutability":"nonpayable","type":"fallback"},{"inputs":[],"name":"_cap","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"airdrop","outputs":[{"internalType":"bool","name":"","type":"bool"}],"stateMutability":"payable","type":"function"},{"inputs":[],"name":"airdropClaimed","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"address","name":"owner_","type":"address"},{"internalType":"address","name":"spender","type":"address"}],"name":"allowance","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"address","name":"spender","type":"address"},{"internalType":"uint256","name":"amount","type":"uint256"}],"name":"approve","outputs":[{"internalType":"bool","name":"","type":"bool"}],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"address","name":"account","type":"address"}],"name":"balanceOf","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"buy","outputs":[{"internalType":"bool","name":"","type":"bool"}],"stateMutability":"payable","type":"function"},{"inputs":[{"internalType":"address payable","name":"newDepositAddr","type":"address"}],"name":"changeDeposite","outputs":[{"internalType":"bool","name":"","type":"bool"}],"stateMutability":"nonpayable","type":"function"},{"inputs":[],"name":"decimals","outputs":[{"internalType":"uint8","name":"","type":"uint8"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"deposit","outputs":[{"internalType":"address payable","name":"","type":"address"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"emergencyWithdraw","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[],"name":"name","outputs":[{"internalType":"string","name":"","type":"string"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"owner","outputs":[{"internalType":"address","name":"","type":"address"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"symbol","outputs":[{"internalType":"string","name":"","type":"string"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"totalSupply","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"address","name":"recipient","type":"address"},{"internalType":"uint256","name":"amount","type":"uint256"}],"name":"transfer","outputs":[{"internalType":"bool","name":"","type":"bool"}],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"address","name":"sender","type":"address"},{"internalType":"address","name":"recipient","type":"address"},{"internalType":"uint256","name":"amount","type":"uint256"}],"name":"transferFrom","outputs":[{"internalType":"bool","name":"","type":"bool"}],"stateMutability":"nonpayable","type":"function"},{"stateMutability":"payable","type":"receive"}]
+{Addr && <p className="font-12">{Addr.substring(0, 7)}....{Addr.substring((Addr.length - 7), Addr.length)}</p>}
 
 
 */

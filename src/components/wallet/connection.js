@@ -62,7 +62,7 @@ const getBalance = async () => {
         }
     
         let balance = await signer.getBalance()
-        return ethers.utils.formatEther(balance) + ' ETH'
+        return ethers.utils.formatEther(balance)
     } catch (error) {
         console.log('Error getting balance:\n',error)
         return error
