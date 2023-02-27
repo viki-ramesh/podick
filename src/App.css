@@ -1,0 +1,725 @@
+.App-ctn {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.vector-4 {
+  top: 30%;
+  width: 12rem;
+  position: absolute;
+  z-index: -1;
+}
+
+.vector-1 {
+  position: absolute;
+  width: 414px;
+  height: 600px;
+  right: 0;
+  top: 20%;
+}
+
+.vector-2 {
+  position: absolute;
+  width: 377px;
+  height: 769px;
+  right: 10%;
+  top: 0;
+}
+
+.vector-3 {
+  position: absolute;
+  width: 614px;
+  height: 669px;
+  right: 0px;
+  top: 20%;
+}
+
+
+
+.App {
+  width: 100%;
+  min-height: 50rem;
+  /* border: 1px solid red; */
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.container {
+  width: var(--container-width);
+  max-width: 1920px;
+  margin-inline: auto;
+}
+
+.Navbar {
+  display: flex;
+  align-items: center;
+}
+
+.logo-ctn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: max-content;
+  /* border: 1px solid red; */
+}
+
+.logo-ctn img {
+  width: 2.5rem;
+  margin-right: 1rem;
+}
+
+.logo-name {
+  font-size: 2.5rem;
+  font-weight: 400;
+}
+
+.navigation-ctn {
+  margin-left: auto;
+}
+
+/* ============info================ */
+
+.info {
+  min-height: 70%;
+  margin-top: 3rem;
+  display: grid;
+  grid-template-columns: 10fr 6fr;
+}
+
+.info-txt {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.info-img-ctn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.info-img {
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.img-back-info {
+  width: 524px;
+  height: 455px;
+  background: rgba(0, 0, 0, 0.13);
+  border-radius: 100px 100px 100px 240px;
+}
+
+.music1-img {
+  position: absolute;
+  width: 490px;
+  height: 426px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 100px 100px 100px 240px;
+}
+
+.info-title {
+  width: 550px;
+}
+
+.info-pr {
+  width: 500px;
+  margin-top: 1rem;
+  font-weight: 400;
+}
+
+.info-btns {
+  margin-top: 5rem;
+  display: flex;
+  gap: 1.5rem;
+  font-weight: 600;
+}
+
+/* =========details============== */
+.details {
+  margin-top: 3rem;
+  min-height: 170px;
+  background: radial-gradient(50% 2900.76% at 50% 53.89%, rgba(58, 52, 86, 0.95) 0%, #211E2E 100%);
+  box-shadow: 0px 4px 4px rgba(192, 183, 232, 0.01);
+  border-radius: 90px;
+  position: relative;
+  z-index: 100;
+  display: grid;
+  grid-template-columns: 1fr .8fr 1fr;
+  gap: 1rem;
+  /* border: 1px solid salmon; */
+}
+
+.search-ctn {
+  display: flex;
+  align-items: center;
+
+}
+
+.hr-line-div {
+
+  margin-left: auto;
+  width: 0px;
+  height: 116.5px;
+  border: 1px solid rgba(192, 183, 232, 0.33);
+}
+
+.search-wrapper {
+  width: 100%;
+  padding-left: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.search-content {
+  text-align: left;
+}
+
+.listen-ctn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.listen-wrapper {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+/* ============buy airdrop =================== */
+.buy-airdrop {
+  margin-top: 2rem;
+  width: 100%;
+  min-height: 30rem;
+  background: radial-gradient(50% 50% at 50% 50%, #403A5F 0%, #211E2E 100%);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 100px;
+  border: 1px solid #C0B7E8;
+  display: grid;
+  grid-template-columns: 0.8fr 1fr 1.5fr;
+  gap: 0.5rem;
+}
+
+.token-sale-info {
+  width: 100%;
+  height: 100%;
+  border-radius: 100px 0 0 100px;
+  padding: 3rem;
+  border-right: 1px solid #C0B7E8;
+
+}
+
+.token-airdrop-info {
+  width: 100%;
+  padding: 3rem;
+  border-right: 1px solid #C0B7E8;
+
+}
+
+.token-sale-ctn {
+  padding: 3rem;
+  border-radius: 0 100px 100px 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.claim-btn {
+  width: 100%;
+  min-height: 50px;
+  background: linear-gradient(90deg, #8176AF 0%, #C0B7E8 100%);
+  border-radius: 30px;
+  border: none;
+  font-size: 20px;
+  font-weight: 600;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+
+.vrtcl-div {
+  display: flex;
+  gap: 100px;
+}
+
+/* ============Progress Bar ============== */
+.wrapper {
+  margin-top: 5rem;
+}
+
+.sale-percent {
+  text-align: right;
+}
+
+.buy-btn-div {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-div {
+  width: 100%;
+  text-align: start;
+}
+
+.buy-input {
+  width: 100%;
+  min-height: 50px;
+  background-color: transparent;
+  border: 1px solid white;
+  border-radius: 10px;
+  color: white;
+  padding-left: 10px;
+}
+
+/* ============ technolygy =================== */
+
+.technology {
+  min-height: max-content;
+}
+
+.tech-img-ctn {
+  width: 100%;
+  height: 300px;
+  border-radius: 200px;
+  background: linear-gradient(0deg, rgba(48, 44, 66, 0.79), rgba(48, 44, 66, 0.79)), url("/src/assests/music-2.jpg");
+  background-position: 0px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.arrow {
+  position: absolute;
+  top: 85%;
+  width: 100px;
+  height: 100px;
+  background: rgba(14, 14, 14, 0.32);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dark-arrow {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background: linear-gradient(267.61deg, #C0B7E8 -0.6%, #8176AF 98.31%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #433D60;
+  font-weight: 600;
+}
+
+.tech-brand-ctn {
+  margin-top: 3rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.tech-brand-ctn img {
+  width: 180px;
+}
+
+/* =============roadmap=================== */
+
+
+.roadmap {
+  overflow: hidden;
+  min-height: max-content;
+}
+
+.roadmap-slider {
+  width: 100%;
+  min-height: max-content;
+}
+
+.roadmap-swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.roadmap-slide {
+  width: 100%;
+  min-height: max-content;
+  height: max-content;
+
+}
+
+.roadmap-title-ctn {
+  width: 100%;
+  min-height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.hr-line-roadmap {
+  width: 100%;
+  height: 1px;
+  background-color: #C0B7E8;
+  position: absolute;
+  z-index: -1;
+}
+
+.roadmap-title-back {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  background: rgba(13, 13, 13, 0.32);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.roadmap-title {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  background: linear-gradient(251.27deg, #C0B7E8 12.87%, #8176AF 89.33%);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #343045;
+
+}
+
+.roadmap-details {
+  width: 100%;
+  min-height: 350px;
+  padding: 3rem;
+}
+
+.arrow-roadmap {
+  color: #C0B7E8;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  font-weight: 600;
+}
+
+.roadmap-txt-ctn {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  text-align: start;
+}
+
+/* =========Team ========= */
+
+.team {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1rem;
+  text-align: center;
+}
+
+.team-div {
+  width: 100%;
+  height: 300px;
+  background: radial-gradient(50% 50% at 50% 50%, #433D60 0%, #211E2E 100%);
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.team-img-ctn {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  background: rgba(14, 14, 14, 0.32);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.team-img {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+}
+
+/* ============== media =============== */
+.media-img-ctn {
+  width: 100%;
+  display: grid;
+  margin-left: auto;
+  margin-right: auto;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1rem;
+}
+
+.media-img-div {
+  border-radius: 10px;
+  background: radial-gradient(50% 50% at 50% 50%, #433D60 0%, #211E2E 100%);
+}
+
+.media-img-div img {
+  width: 75%;
+  min-height: 120px;
+  object-position: center;
+  object-fit: contain;
+}
+
+/* ============ tokenomics ==================== */
+
+.tokenmics-img {
+  width: 100%;
+  height: 70%;
+}
+
+/* =========== bottom section ============== */
+
+.bootom-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  color: #C0B7E8;
+}
+
+
+
+/* ================================================ */
+@media screen and (max-width:1080px){
+
+
+  /* =============== vectors ================= */
+
+  .vector-4 {
+    top: 30%;
+    width: 7rem;
+    position: absolute;
+    z-index: -1;
+  }
+
+  .vector-1 {
+    position: absolute;
+    width: 214px;
+    height: 300px;
+    right: 0;
+    top: 20%;
+    z-index: -1;
+
+  }
+
+  .vector-2 {
+    position: absolute;
+    width: 130px;
+    height: 369px;
+    right: 10%;
+    top: 0;
+    z-index: -1;
+
+  }
+
+  .vector-3 {
+    position: absolute;
+    width: 314px;
+    height: 330px;
+    right: 0px;
+    top: 20%;
+    z-index: -1;
+  }
+
+  .logo-ctn img {
+    width: 2rem;
+    margin-right: 0.5rem;
+  }
+
+  .logo-name {
+    font-size: 2rem;
+    font-weight: 400;
+  }
+
+  .navigation-ctn {
+    display: none;
+  }
+
+  /* ============info================ */
+
+  .info {
+    margin-top: 2rem;
+    display: table;
+    flex-direction: column;
+  }
+
+  .info-txt {
+    display: table-footer-group;
+  }
+
+  .info-img-ctn {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .info-img {
+    display: table-header-group;
+
+  }
+
+  .music1-img {
+    width: 300px;
+    height: 230px;
+    position: absolute;
+  }
+
+  .img-back-info {
+    width: 320px;
+    height: 250px;
+
+  }
+
+  .info-title {
+    z-index: 10;
+    width: 100%;
+  }
+
+  .info-title:nth-child(1) {
+    margin-top: 3rem;
+  }
+
+  .info-pr {
+    width: 100%;
+    margin-top: 1rem;
+    font-weight: 400;
+  }
+
+  .info-btns {
+    margin-top: 3rem;
+    flex-direction: column;
+  }
+
+  /* =========details============== */
+  .details {
+    margin-top: 3rem;
+    min-height: max-content;
+    background: radial-gradient(50% 2900.76% at 50% 53.89%, rgba(58, 52, 86, 0.95) 0%, #211E2E 100%);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .hr-line-div {
+    display: none;
+  }
+
+  .details-ctn {
+    padding: 1rem 0.7rem 1rem 0;
+  }
+
+  .listen-wrapper {
+    width: 100%;
+    padding-left: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  /* ============buy airdrop =================== */
+  .buy-airdrop {
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .token-sale-info {
+    border-radius: 10px 10px 0 0;
+    padding: 1rem;
+    border-bottom: 1px solid #C0B7E8;
+    border-right: none;
+  }
+
+  .token-airdrop-info {
+    border-radius: 10px 10px 0 0;
+    border-right: none;
+    padding: 1rem;
+    border-bottom: 1px solid #C0B7E8;
+
+  }
+
+  .claim-btn {
+    min-height: 45px;
+  }
+
+  .token-sale-ctn {
+    padding: 1rem;
+  }
+
+  .vrtcl-div {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .arrow {
+    display: none;
+  }
+
+  .tech-brand-ctn {
+    margin-top: 1rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    place-content: center;
+    place-items: center;
+    gap: 0.5rem;
+  }
+
+  .tech-brand-ctn img {
+    width: 120px;
+  }
+
+  .team {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1rem;
+    text-align: center;
+  }
+
+  /* ============== media =============== */
+  .media-img-ctn {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* ============ tokenomics ==================== */
+
+  .tokenmics-img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .bottom {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .bottom-vector {
+    width: 80%;
+  }
+
+}

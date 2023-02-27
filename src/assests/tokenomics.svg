@@ -1,0 +1,144 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="2471" height="1338" viewBox="0 0 2471 1338">
+  <defs>
+    <radialGradient id="radial-gradient" cx="0.5" cy="0.5" r="0.5" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#433d60"/>
+      <stop offset="1" stop-color="#211e2e"/>
+    </radialGradient>
+    <filter id="Rectangle_25" x="0" y="0" width="2471" height="1338" filterUnits="userSpaceOnUse">
+      <feOffset dx="10" dy="10" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="5" result="blur"/>
+      <feFlood flood-color="#0b0b0f" flood-opacity="0.961"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#460ac1"/>
+      <stop offset="1" stop-color="#9802d6"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-2" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#40c10a"/>
+      <stop offset="1" stop-color="#bbd602"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-3" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#0ac1b5"/>
+      <stop offset="1" stop-color="#02cfd6"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-4" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#810bc4"/>
+      <stop offset="1" stop-color="#cf02d6"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-5" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#81c40b"/>
+      <stop offset="1" stop-color="#d6c102"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-6" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#0bb1c4"/>
+      <stop offset="1" stop-color="#0965ce"/>
+      <stop offset="1" stop-color="#d6c102"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-7" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#be0bc4"/>
+      <stop offset="1" stop-color="#d6026c"/>
+    </linearGradient>
+  </defs>
+  <g id="tokenomics" transform="translate(5 5)">
+    <g transform="matrix(1, 0, 0, 1, -5, -5)" filter="url(#Rectangle_25)">
+      <rect id="Rectangle_25-2" data-name="Rectangle 25" width="2441" height="1308" rx="20" transform="translate(5 5)" fill="url(#radial-gradient)"/>
+    </g>
+    <text id="Private_Round" data-name="Private Round" transform="translate(232.5 282.362)" fill="#bcbcbc" font-size="25" font-family="Montserrat-Bold, Montserrat" font-weight="700" letter-spacing="0.09em"><tspan x="0" y="24">Private </tspan><tspan x="0" y="54">Round</tspan></text>
+    <text id="Partners_Advisors" data-name="Partners &amp; Advisors" transform="translate(232.5 750.266)" fill="#bcbcbc" font-size="25" font-family="Montserrat-Bold, Montserrat" font-weight="700" letter-spacing="0.09em"><tspan x="0" y="24">Partners &amp; </tspan><tspan x="0" y="54">Advisors</tspan></text>
+    <text id="Marketing_Ecosystem:" data-name="Marketing &amp; Ecosystem:" transform="translate(232.5 1123.931)" fill="#bcbcbc" font-size="25" font-family="Montserrat-Bold, Montserrat" font-weight="700" letter-spacing="0.09em"><tspan x="0" y="24">Marketing &amp; </tspan><tspan x="0" y="54">Ecosystem:</tspan></text>
+    <text id="SALES" transform="translate(32.241 398) rotate(-90)" fill="#460ac1" font-size="40" font-family="Montserrat-Bold, Montserrat" font-weight="700" letter-spacing="0.148em"><tspan x="-78.18" y="39">SALES</tspan></text>
+    <text id="TEAM" transform="translate(32.241 799.5) rotate(-90)" fill="#c1bb0a" font-size="40" font-family="Montserrat-Bold, Montserrat" font-weight="700" letter-spacing="0.148em"><tspan x="-69.08" y="39">TEAM</tspan></text>
+    <text id="PROJECT" transform="translate(32.241 1236.5) rotate(-90)" fill="#0ac1b5" font-size="40" font-family="Montserrat-Bold, Montserrat" font-weight="700" letter-spacing="0.148em"><tspan x="-99.24" y="39">PROJEC</tspan><tspan x="-12.36" y="88">T</tspan></text>
+    <text id="Seed_Round" data-name="Seed Round" transform="translate(232.5 175.5)" fill="#bcbcbc" font-size="25" font-family="Montserrat-Bold, Montserrat" font-weight="700" letter-spacing="0.09em"><tspan x="0" y="24">Seed Round</tspan></text>
+    <text id="Team-2" data-name="Team" transform="translate(232.5 643.403)" fill="#bcbcbc" font-size="25" font-family="Montserrat-Bold, Montserrat" font-weight="700" letter-spacing="0.09em"><tspan x="0" y="24">Team</tspan></text>
+    <text id="at_Team" data-name="at Team" transform="translate(838.5 60.403)" fill="#bcbcbc" font-size="25" font-family="Montserrat-Bold, Montserrat" font-weight="700" letter-spacing="0.09em"><tspan x="0" y="0">At Team</tspan></text>
+    <text id="_" data-name="%" transform="translate(599.5 60.403)" fill="#bcbcbc" font-size="25" font-family="Montserrat-Bold, Montserrat" font-weight="700" letter-spacing="0.09em"><tspan x="0" y="0">%</tspan></text>
+    <text id="Cliff" transform="translate(1050.241 60.403)" fill="#bcbcbc" font-size="25" font-family="Montserrat-Bold, Montserrat" font-weight="700" letter-spacing="0.09em"><tspan x="0" y="0">Cliff</tspan></text>
+    <text id="vesting" transform="translate(1331.759 60.403)" fill="#bcbcbc" font-size="25" font-family="Montserrat-Bold, Montserrat" font-weight="700" letter-spacing="0.09em"><tspan x="0" y="0">Vesting</tspan></text>
+    <text id="Liquidity_LP_Rewards:" data-name="Liquidity &amp; LP Rewards:" transform="translate(232.5 1017.069)" fill="#bcbcbc" font-size="25" font-family="Montserrat-Bold, Montserrat" font-weight="700" letter-spacing="0.09em"><tspan x="0" y="24">Liquidity &amp; </tspan><tspan x="0" y="54">LP Rewards:</tspan></text>
+    <text id="_5_" data-name="5%" transform="translate(485 175.5)" fill="#bcbcbc" font-size="25" font-family="Montserrat-Bold, Montserrat" font-weight="700" letter-spacing="0.09em"><tspan x="-19.4" y="24">5%</tspan></text>
+    <text id="_10_" data-name="10%" transform="translate(485 643.403)" fill="#bcbcbc" font-size="25" font-family="Montserrat-Bold, Montserrat" font-weight="700" letter-spacing="0.09em"><tspan x="-26.6" y="24">10%</tspan></text>
+    <text id="_35_" data-name="35%" transform="translate(485 1030.403)" fill="#bcbcbc" font-size="25" font-family="Montserrat-Bold, Montserrat" font-weight="700" letter-spacing="0.09em"><tspan x="-27.8" y="24">35%</tspan></text>
+    <text id="_0_" data-name="0%" transform="translate(792.5 175.5)" fill="#bcbcbc" font-size="25" font-family="Montserrat-Bold, Montserrat" font-weight="700" letter-spacing="0.09em"><tspan x="-20.575" y="24">0%</tspan></text>
+    <text id="_0_2" data-name="0%" transform="translate(792.5 643.403)" fill="#bcbcbc" font-size="25" font-family="Montserrat-Bold, Montserrat" font-weight="700" letter-spacing="0.09em"><tspan x="-20.575" y="24">0%</tspan></text>
+    <text id="_0_3" data-name="0%" transform="translate(792.5 1030.403)" fill="#bcbcbc" font-size="25" font-family="Montserrat-Bold, Montserrat" font-weight="700" letter-spacing="0.09em"><tspan x="-20.575" y="24">0%</tspan></text>
+    <text id="_4_Months" data-name="4 Months" transform="translate(993.741 175.5)" fill="#bcbcbc" font-size="25" font-family="Montserrat-Bold, Montserrat" font-weight="700" letter-spacing="0.09em"><tspan x="-69.5" y="24">4 Months</tspan></text>
+    <text id="_12_Months" data-name="12 Months" transform="translate(993.741 643.403)" fill="#bcbcbc" font-size="25" font-family="Montserrat-Bold, Montserrat" font-weight="700" letter-spacing="0.09em"><tspan x="-74.287" y="24">12 Months</tspan></text>
+    <text id="_12_Months-2" data-name="12 Months" transform="translate(993.741 1030.403)" fill="#bcbcbc" font-size="25" font-family="Montserrat-Bold, Montserrat" font-weight="700" letter-spacing="0.09em"><tspan x="-74.287" y="24">12 Months</tspan></text>
+    <text id="_24_Months" data-name="24 Months" transform="translate(1385.62 202.5)" fill="#bcbcbc" font-size="25" font-family="Montserrat-Bold, Montserrat" font-weight="700" letter-spacing="0.09em"><tspan x="-77.875" y="0">24 Months</tspan></text>
+    <text id="Total_supply" data-name="Total supply" transform="translate(1962.62 652)" fill="#bcbcbc" font-size="25" font-family="Montserrat-Bold, Montserrat" font-weight="700" letter-spacing="0.09em"><tspan x="-93.1" y="0">Total Supply</tspan></text>
+    <text id="token_name" data-name="token name" transform="translate(2225.62 853.403)" fill="#bcbcbc" font-size="25" font-family="Montserrat-Bold, Montserrat" font-weight="700" letter-spacing="0.09em"><tspan x="-92.262" y="0">Token Name</tspan></text>
+    <text id="token_Type:" data-name="token Type:" transform="translate(1700.62 853.403)" fill="#bcbcbc" font-size="25" font-family="Montserrat-Bold, Montserrat" font-weight="700" letter-spacing="0.09em"><tspan x="-89.088" y="0">Token Type:</tspan></text>
+    <text id="Initial_Circulating:" data-name="Initial Circulating:" transform="translate(2268.62 1087.903)" fill="#bcbcbc" font-size="25" font-family="Montserrat-Bold, Montserrat" font-weight="700" letter-spacing="0.09em"><tspan x="-137.675" y="0">Initial Circulating:</tspan></text>
+    <text id="Initial_Market_cap:" data-name="Initial Market cap:" transform="translate(1748.62 1087.903)" fill="#bcbcbc" font-size="25" font-family="Montserrat-Bold, Montserrat" font-weight="700" letter-spacing="0.09em"><tspan x="-139.5" y="0">Initial Market Cap:</tspan></text>
+    <text id="_24_Months-2" data-name="24 Months" transform="translate(1385.62 670.403)" fill="#bcbcbc" font-size="25" font-family="Montserrat-Bold, Montserrat" font-weight="700" letter-spacing="0.09em"><tspan x="-77.875" y="0">24 Months</tspan></text>
+    <text id="_24_Months-3" data-name="24 Months" transform="translate(1385.62 1057.403)" fill="#bcbcbc" font-size="25" font-family="Montserrat-Bold, Montserrat" font-weight="700" letter-spacing="0.09em"><tspan x="-77.875" y="0">24 Months</tspan></text>
+    <text id="_24_Months-4" data-name="24 Months" transform="translate(1385.62 309)" fill="#bcbcbc" font-size="25" font-family="Montserrat-Bold, Montserrat" font-weight="700" letter-spacing="0.09em"><tspan x="-77.875" y="0">24 Months</tspan></text>
+    <text id="_24_Months-5" data-name="24 Months" transform="translate(1385.62 776.903)" fill="#bcbcbc" font-size="25" font-family="Montserrat-Bold, Montserrat" font-weight="700" letter-spacing="0.09em"><tspan x="-77.875" y="0">24 Months</tspan></text>
+    <text id="_24_Months-6" data-name="24 Months" transform="translate(1385.62 1163.903)" fill="#bcbcbc" font-size="25" font-family="Montserrat-Bold, Montserrat" font-weight="700" letter-spacing="0.09em"><tspan x="-77.875" y="0">24 Months</tspan></text>
+    <text id="_0_Month" data-name="0 Month" transform="translate(1385.62 415.5)" fill="#bcbcbc" font-size="25" font-family="Montserrat-Bold, Montserrat" font-weight="700" letter-spacing="0.09em"><tspan x="-61.613" y="0">0 Month</tspan></text>
+    <text id="_4_Months-2" data-name="4 Months" transform="translate(993.741 282)" fill="#bcbcbc" font-size="25" font-family="Montserrat-Bold, Montserrat" font-weight="700" letter-spacing="0.09em"><tspan x="-69.5" y="24">4 Months</tspan></text>
+    <text id="_12_Months-3" data-name="12 Months" transform="translate(993.741 749.903)" fill="#bcbcbc" font-size="25" font-family="Montserrat-Bold, Montserrat" font-weight="700" letter-spacing="0.09em"><tspan x="-74.287" y="24">12 Months</tspan></text>
+    <text id="_12_Months-4" data-name="12 Months" transform="translate(993.741 1136.903)" fill="#bcbcbc" font-size="25" font-family="Montserrat-Bold, Montserrat" font-weight="700" letter-spacing="0.09em"><tspan x="-74.287" y="24">12 Months</tspan></text>
+    <text id="_0_Months" data-name="0 Months" transform="translate(993.741 388.5)" fill="#bcbcbc" font-size="25" font-family="Montserrat-Bold, Montserrat" font-weight="700" letter-spacing="0.09em"><tspan x="-69.375" y="24">0 Months</tspan></text>
+    <text id="_21_000_0000" data-name="21,000,0000" transform="translate(1851.5 683.5)" fill="#bcbcbc" font-size="25" font-family="Montserrat-Bold, Montserrat" font-weight="700" letter-spacing="0.09em"><tspan x="-89" y="24">21,000,0000</tspan></text>
+    <text id="BSC-20" transform="translate(1589.62 877)" fill="#bcbcbc" font-size="25" font-family="Montserrat-Bold, Montserrat" font-weight="700" letter-spacing="0.09em"><tspan x="-52.712" y="24">BSC-20</tspan></text>
+    <text id="_POD" data-name="$POD" transform="translate(2114.62 877)" fill="#bcbcbc" font-size="25" font-family="Montserrat-Bold, Montserrat" font-weight="700" letter-spacing="0.09em"><tspan x="-41.375" y="24">$POD</tspan></text>
+    <text id="_8_95_350" data-name="$8,95,350" transform="translate(1634.301 1111.5)" fill="#bcbcbc" font-size="25" font-family="Montserrat-Bold, Montserrat" font-weight="700" letter-spacing="0.09em"><tspan x="-70.625" y="24">$8,95,350</tspan></text>
+    <text id="_63_000_00_POD" data-name="63,000,00 POD" transform="translate(2157.62 1111.5)" fill="#bcbcbc" font-size="25" font-family="Montserrat-Bold, Montserrat" font-weight="700" letter-spacing="0.09em"><tspan x="-72.863" y="24">63,000,00 </tspan><tspan x="-32.275" y="54">POD</tspan></text>
+    <text id="_10_2" data-name="10%" transform="translate(485 282)" fill="#bcbcbc" font-size="25" font-family="Montserrat-Bold, Montserrat" font-weight="700" letter-spacing="0.09em"><tspan x="-26.6" y="24">10%</tspan></text>
+    <text id="_7_" data-name="7%" transform="translate(485 749.903)" fill="#bcbcbc" font-size="25" font-family="Montserrat-Bold, Montserrat" font-weight="700" letter-spacing="0.09em"><tspan x="-19.913" y="24">7%</tspan></text>
+    <text id="_30_" data-name="30%" transform="translate(485 1136.903)" fill="#bcbcbc" font-size="25" font-family="Montserrat-Bold, Montserrat" font-weight="700" letter-spacing="0.09em"><tspan x="-29.1" y="24">30%</tspan></text>
+    <text id="_0_4" data-name="0%" transform="translate(792.5 282)" fill="#bcbcbc" font-size="25" font-family="Montserrat-Bold, Montserrat" font-weight="700" letter-spacing="0.09em"><tspan x="-20.575" y="24">0%</tspan></text>
+    <text id="_0_5" data-name="0%" transform="translate(792.5 749.903)" fill="#bcbcbc" font-size="25" font-family="Montserrat-Bold, Montserrat" font-weight="700" letter-spacing="0.09em"><tspan x="-20.575" y="24">0%</tspan></text>
+    <text id="_0_6" data-name="0%" transform="translate(792.5 1136.903)" fill="#bcbcbc" font-size="25" font-family="Montserrat-Bold, Montserrat" font-weight="700" letter-spacing="0.09em"><tspan x="-20.575" y="24">0%</tspan></text>
+    <text id="_3_" data-name="3%" transform="translate(485 388.5)" fill="#bcbcbc" font-size="25" font-family="Montserrat-Bold, Montserrat" font-weight="700" letter-spacing="0.09em"><tspan x="-19.362" y="24">3%</tspan></text>
+    <text id="_100_" data-name="100%" transform="translate(792.5 388.5)" fill="#bcbcbc" font-size="25" font-family="Montserrat-Bold, Montserrat" font-weight="700" letter-spacing="0.09em"><tspan x="-36.213" y="24">100%</tspan></text>
+    <text id="Public_Round" data-name="Public Round" transform="translate(232.5 389.225)" fill="#bcbcbc" font-size="25" font-family="Montserrat-Bold, Montserrat" font-weight="700" letter-spacing="0.09em"><tspan x="0" y="24">Public </tspan><tspan x="0" y="54">Round</tspan></text>
+    <line id="Line_26" data-name="Line 26" x2="1522" transform="translate(0 523)" fill="none" stroke="#707070" stroke-width="2" opacity="0.4"/>
+    <line id="Line_30" data-name="Line 30" x2="1522" transform="translate(0 102)" fill="none" stroke="#707070" stroke-width="2" opacity="0.4"/>
+    <line id="Line_28" data-name="Line 28" y2="1308" transform="translate(485)" fill="none" stroke="#707070" stroke-width="2" opacity="0.4"/>
+    <line id="Line_31" data-name="Line 31" y2="1308" transform="translate(792.5)" fill="none" stroke="#707070" stroke-width="2" opacity="0.4"/>
+    <line id="Line_32" data-name="Line 32" y2="1308" transform="translate(1220)" fill="none" stroke="#707070" stroke-width="2" opacity="0.4"/>
+    <line id="Line_233" data-name="Line 233" y2="1308" transform="translate(974)" fill="none" stroke="#707070" stroke-width="2" opacity="0.4"/>
+    <line id="Line_33" data-name="Line 33" y2="1308" transform="translate(1526)" fill="none" stroke="#707070" stroke-width="2" opacity="0.4"/>
+    <line id="Line_27" data-name="Line 27" x2="1522" transform="translate(0 910)" fill="none" stroke="#707070" stroke-width="2" opacity="0.4"/>
+    <path id="Path_8" data-name="Path 8" d="M19.666,7.421A12.245,12.245,0,1,0,31.91,19.666,12.259,12.259,0,0,0,19.666,7.421m0-7.421A19.666,19.666,0,1,1,0,19.666,19.666,19.666,0,0,1,19.666,0Z" transform="translate(155 175.5)" fill="url(#linear-gradient)"/>
+    <path id="Path_8-2" data-name="Path 8" d="M19.666,7.421A12.245,12.245,0,1,0,31.91,19.666,12.259,12.259,0,0,0,19.666,7.421m0-7.421A19.666,19.666,0,1,1,0,19.666,19.666,19.666,0,0,1,19.666,0Z" transform="translate(155 643.403)" fill="url(#linear-gradient-2)"/>
+    <path id="Path_8-3" data-name="Path 8" d="M19.666,7.421A12.245,12.245,0,1,0,31.91,19.666,12.259,12.259,0,0,0,19.666,7.421m0-7.421A19.666,19.666,0,1,1,0,19.666,19.666,19.666,0,0,1,19.666,0Z" transform="translate(155 1030.403)" fill="url(#linear-gradient-3)"/>
+    <path id="Path_8-4" data-name="Path 8" d="M19.666,7.421A12.245,12.245,0,1,0,31.91,19.666,12.259,12.259,0,0,0,19.666,7.421m0-7.421A19.666,19.666,0,1,1,0,19.666,19.666,19.666,0,0,1,19.666,0Z" transform="translate(155 282.362)" fill="url(#linear-gradient-4)"/>
+    <path id="Path_8-5" data-name="Path 8" d="M19.666,7.421A12.245,12.245,0,1,0,31.91,19.666,12.259,12.259,0,0,0,19.666,7.421m0-7.421A19.666,19.666,0,1,1,0,19.666,19.666,19.666,0,0,1,19.666,0Z" transform="translate(155 750.266)" fill="url(#linear-gradient-5)"/>
+    <path id="Path_8-6" data-name="Path 8" d="M19.666,7.421A12.245,12.245,0,1,0,31.91,19.666,12.259,12.259,0,0,0,19.666,7.421m0-7.421A19.666,19.666,0,1,1,0,19.666,19.666,19.666,0,0,1,19.666,0Z" transform="translate(155 1137.266)" fill="url(#linear-gradient-6)"/>
+    <path id="Path_8-7" data-name="Path 8" d="M19.666,7.421A12.245,12.245,0,1,0,31.91,19.666,12.259,12.259,0,0,0,19.666,7.421m0-7.421A19.666,19.666,0,1,1,0,19.666,19.666,19.666,0,0,1,19.666,0Z" transform="translate(155 389.225)" fill="url(#linear-gradient-7)"/>
+    <g id="Ellipse_253" data-name="Ellipse 253" transform="translate(1758.999 87.008)" fill="none" stroke="#4d09c2" stroke-width="60" stroke-dasharray="100 1526">
+      <circle cx="203.5" cy="203.5" r="203.5" stroke="none"/>
+      <circle cx="203.5" cy="203.5" r="173.5" fill="none"/>
+    </g>
+    <g id="Ellipse_254" data-name="Ellipse 254" transform="matrix(0.839, 0.545, -0.545, 0.839, 1902.664, 9.005)" fill="none" stroke="#990fa4" stroke-width="60" stroke-dasharray="200 1526">
+      <circle cx="203.5" cy="203.5" r="203.5" stroke="none"/>
+      <circle cx="203.5" cy="203.5" r="173.5" fill="none"/>
+    </g>
+    <g id="Ellipse_256" data-name="Ellipse 256" transform="matrix(-0.53, 0.848, -0.848, -0.53, 2242.916, 225.769)" fill="none" stroke="#317708" stroke-width="60" stroke-dasharray="200 1526">
+      <circle cx="203.5" cy="203.5" r="203.5" stroke="none"/>
+      <circle cx="203.5" cy="203.5" r="173.5" fill="none"/>
+    </g>
+    <g id="Ellipse_255" data-name="Ellipse 255" transform="translate(2179.699 101.699) rotate(94)" fill="none" stroke="#6a850d" stroke-width="60" stroke-dasharray="80 1526">
+      <circle cx="203.5" cy="203.5" r="203.5" stroke="none"/>
+      <circle cx="203.5" cy="203.5" r="173.5" fill="none"/>
+    </g>
+    <g id="Ellipse_257" data-name="Ellipse 257" transform="translate(2151.309 507.708) rotate(-176)" fill="none" stroke="#85690d" stroke-width="60" stroke-dasharray="150 1526">
+      <circle cx="203.5" cy="203.5" r="203.5" stroke="none"/>
+      <circle cx="203.5" cy="203.5" r="173.5" fill="none"/>
+    </g>
+    <g id="Ellipse_258" data-name="Ellipse 258" transform="translate(1922.447 575.5) rotate(-127)" fill="none" stroke="#85490d" stroke-width="60" stroke-dasharray="250 1526">
+      <circle cx="203.5" cy="203.5" r="203.5" stroke="none"/>
+      <circle cx="203.5" cy="203.5" r="173.5" fill="none"/>
+    </g>
+    <g id="Ellipse_259" data-name="Ellipse 259" transform="translate(1677.508 330.561) rotate(-53)" fill="none" stroke="#0d6885" stroke-width="60" stroke-dasharray="177 1526">
+      <circle cx="203.5" cy="203.5" r="203.5" stroke="none"/>
+      <circle cx="203.5" cy="203.5" r="173.5" fill="none"/>
+    </g>
+  </g>
+</svg>

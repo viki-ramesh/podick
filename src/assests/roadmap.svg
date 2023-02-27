@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1454.776" height="472.523" viewBox="0 0 1454.776 472.523">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.223" y1="0.794" x2="0.846" y2="0.228" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#8176af"/>
+      <stop offset="1" stop-color="#c0b7e8"/>
+    </linearGradient>
+  </defs>
+  <g id="roadmap" transform="translate(2.864 3.023)">
+    <path id="roadmap-back" d="M-9,21.733C6.478,71.421,88.05,181.243,245.37,106.768,350.5,57,405.361,2.726,539.107,91.262s237.21,82.534,302.316-9,234.687-116.047,298.277-7.5S1417.79,196.3,1440,106.768" transform="translate(9 -3)" fill="none" stroke="#707070" stroke-width="6"/>
+    <circle id="Ellipse_245" data-name="Ellipse 245" cx="100" cy="100" r="100" transform="translate(136 0.5)" fill="rgba(13,13,13,0.32)"/>
+    <circle id="Ellipse_248" data-name="Ellipse 248" cx="100" cy="100" r="100" transform="translate(798 0.5)" fill="rgba(13,13,13,0.32)"/>
+    <circle id="Ellipse_246" data-name="Ellipse 246" cx="100" cy="100" r="100" transform="translate(467 0.5)" fill="rgba(13,13,13,0.32)"/>
+    <circle id="Ellipse_247" data-name="Ellipse 247" cx="100" cy="100" r="100" transform="translate(1129 0.5)" fill="rgba(13,13,13,0.32)"/>
+    <circle id="Ellipse_249" data-name="Ellipse 249" cx="80" cy="80" r="80" transform="translate(156 20.5)" fill="url(#linear-gradient)"/>
+    <circle id="Ellipse_250" data-name="Ellipse 250" cx="80" cy="80" r="80" transform="translate(487 20.5)" fill="url(#linear-gradient)"/>
+    <circle id="Ellipse_251" data-name="Ellipse 251" cx="80" cy="80" r="80" transform="translate(818 20.5)" fill="url(#linear-gradient)"/>
+    <circle id="Ellipse_252" data-name="Ellipse 252" cx="80" cy="80" r="80" transform="translate(1149 20.5)" fill="url(#linear-gradient)"/>
+    <text id="Q-1" transform="translate(182 119.5)" fill="#343045" font-size="64" font-family="Montserrat-Bold, Montserrat" font-weight="700" letter-spacing="0.041em"><tspan x="0" y="0">Q-1</tspan></text>
+    <text id="Q-2" transform="translate(507 119.5)" fill="#343045" font-size="64" font-family="Montserrat-Bold, Montserrat" font-weight="700" letter-spacing="0.041em"><tspan x="0" y="0">Q-2</tspan></text>
+    <text id="Q-3" transform="translate(838 119.5)" fill="#343045" font-size="64" font-family="Montserrat-Bold, Montserrat" font-weight="700" letter-spacing="0.041em"><tspan x="0" y="0">Q-3</tspan></text>
+    <text id="Q-4" transform="translate(1165 119.5)" fill="#343045" font-size="64" font-family="Montserrat-Bold, Montserrat" font-weight="700" letter-spacing="0.041em"><tspan x="0" y="0">Q-4</tspan></text>
+    <g id="arrow-small-right" transform="translate(108.083 249.356)">
+      <path id="Path_4648" data-name="Path 4648" d="M47.458,36.685H19.542m27.917,0L36.292,51.037M47.458,36.685,36.292,22.333" transform="translate(-19.542 -22.333)" fill="none" stroke="#c0b7e8" stroke-linecap="round" stroke-linejoin="round" stroke-width="4"/>
+    </g>
+    <g id="arrow-small-right-2" data-name="arrow-small-right" transform="translate(458.042 251.741)">
+      <path id="Path_4648-2" data-name="Path 4648" d="M47.458,36.157H19.542m27.917,0L36.292,49.982M47.458,36.157,36.292,22.333" transform="translate(-19.542 -22.333)" fill="none" stroke="#c0b7e8" stroke-linecap="round" stroke-linejoin="round" stroke-width="4"/>
+    </g>
+    <g id="arrow-small-right-3" data-name="arrow-small-right" transform="translate(789.542 251.741)">
+      <path id="Path_4648-3" data-name="Path 4648" d="M47.458,36.157H19.542m27.917,0L36.292,49.982M47.458,36.157,36.292,22.333" transform="translate(-19.542 -22.333)" fill="none" stroke="#c0b7e8" stroke-linecap="round" stroke-linejoin="round" stroke-width="4"/>
+    </g>
+    <g id="arrow-small-right-4" data-name="arrow-small-right" transform="translate(789.542 325.214)">
+      <path id="Path_4648-4" data-name="Path 4648" d="M47.458,36.157H19.542m27.917,0L36.292,49.982M47.458,36.157,36.292,22.333" transform="translate(-19.542 -22.333)" fill="none" stroke="#c0b7e8" stroke-linecap="round" stroke-linejoin="round" stroke-width="4"/>
+    </g>
+    <g id="arrow-small-right-5" data-name="arrow-small-right" transform="translate(1133.542 242.532)">
+      <path id="Path_4648-5" data-name="Path 4648" d="M47.458,36.157H19.542m27.917,0L36.292,49.982M47.458,36.157,36.292,22.333" transform="translate(-19.542 -22.333)" fill="none" stroke="#c0b7e8" stroke-linecap="round" stroke-linejoin="round" stroke-width="4"/>
+    </g>
+    <g id="arrow-small-right-6" data-name="arrow-small-right" transform="translate(1133.542 291.325)">
+      <path id="Path_4648-6" data-name="Path 4648" d="M47.458,36.157H19.542m27.917,0L36.292,49.982M47.458,36.157,36.292,22.333" transform="translate(-19.542 -22.333)" fill="none" stroke="#c0b7e8" stroke-linecap="round" stroke-linejoin="round" stroke-width="4"/>
+    </g>
+    <g id="arrow-small-right-7" data-name="arrow-small-right" transform="translate(1133.542 359.467)">
+      <path id="Path_4648-7" data-name="Path 4648" d="M47.458,36.157H19.542m27.917,0L36.292,49.982M47.458,36.157,36.292,22.333" transform="translate(-19.542 -22.333)" fill="none" stroke="#c0b7e8" stroke-linecap="round" stroke-linejoin="round" stroke-width="4"/>
+    </g>
+    <g id="arrow-small-right-8" data-name="arrow-small-right" transform="translate(458.042 301.852)">
+      <path id="Path_4648-8" data-name="Path 4648" d="M47.458,36.157H19.542m27.917,0L36.292,49.982M47.458,36.157,36.292,22.333" transform="translate(-19.542 -22.333)" fill="none" stroke="#c0b7e8" stroke-linecap="round" stroke-linejoin="round" stroke-width="4"/>
+    </g>
+    <g id="arrow-small-right-9" data-name="arrow-small-right" transform="translate(458.042 357.214)">
+      <path id="Path_4648-9" data-name="Path 4648" d="M47.458,36.157H19.542m27.917,0L36.292,49.982M47.458,36.157,36.292,22.333" transform="translate(-19.542 -22.333)" fill="none" stroke="#c0b7e8" stroke-linecap="round" stroke-linejoin="round" stroke-width="4"/>
+    </g>
+    <g id="arrow-small-right-10" data-name="arrow-small-right" transform="translate(108.083 304.622)">
+      <path id="Path_4648-10" data-name="Path 4648" d="M47.458,36.685H19.542m27.917,0L36.292,51.037M47.458,36.685,36.292,22.333" transform="translate(-19.542 -22.333)" fill="none" stroke="#c0b7e8" stroke-linecap="round" stroke-linejoin="round" stroke-width="4"/>
+    </g>
+    <g id="arrow-small-right-11" data-name="arrow-small-right" transform="translate(108.083 359.888)">
+      <path id="Path_4648-11" data-name="Path 4648" d="M47.458,36.685H19.542m27.917,0L36.292,51.037M47.458,36.685,36.292,22.333" transform="translate(-19.542 -22.333)" fill="none" stroke="#c0b7e8" stroke-linecap="round" stroke-linejoin="round" stroke-width="4"/>
+    </g>
+    <g id="arrow-small-right-12" data-name="arrow-small-right" transform="translate(108.083 415.154)">
+      <path id="Path_4648-12" data-name="Path 4648" d="M47.458,36.685H19.542m27.917,0L36.292,51.037M47.458,36.685,36.292,22.333" transform="translate(-19.542 -22.333)" fill="none" stroke="#c0b7e8" stroke-linecap="round" stroke-linejoin="round" stroke-width="4"/>
+    </g>
+    <text id="Private_Sale" data-name="Private Sale" transform="translate(163 245.5)" fill="#fff" font-size="24" font-family="Montserrat-Bold, Montserrat" font-weight="700" letter-spacing="0.041em"><tspan x="0" y="23">Private Sale</tspan></text>
+    <text id="Promotions" transform="translate(512.958 248.027)" fill="#fff" font-size="24" font-family="Montserrat-Bold, Montserrat" font-weight="700" letter-spacing="0.041em"><tspan x="0" y="23">Promotions</tspan></text>
+    <text id="Staking_Farming" data-name="Staking &amp; Farming" transform="translate(512.959 348.248)" fill="#fff" font-size="24" font-family="Montserrat-Bold, Montserrat" font-weight="700" letter-spacing="0.041em"><tspan x="0" y="23">Staking &amp; </tspan><tspan x="0" y="52">Farming</tspan></text>
+    <text id="App_v2" data-name="App v2" transform="translate(512.958 298.137)" fill="#fff" font-size="24" font-family="Montserrat-Bold, Montserrat" font-weight="700" letter-spacing="0.041em"><tspan x="0" y="23">App v2</tspan></text>
+    <text id="Open_Platform_for_Creators" data-name="Open Platform for Creators" transform="translate(844.459 245.5)" fill="#fff" font-size="24" font-family="Montserrat-Bold, Montserrat" font-weight="700" letter-spacing="0.041em"><tspan x="0" y="23">Open Platform </tspan><tspan x="0" y="52">for Creators</tspan></text>
+    <text id="Music_Studio_v1" data-name="Music Studio v1" transform="translate(844.459 319.248)" fill="#fff" font-size="24" font-family="Montserrat-Bold, Montserrat" font-weight="700" letter-spacing="0.041em"><tspan x="0" y="23">Music Studio </tspan><tspan x="0" y="52">v1</tspan></text>
+    <text id="Live_Events" data-name="Live Events" transform="translate(1188.458 236.565)" fill="#fff" font-size="24" font-family="Montserrat-Bold, Montserrat" font-weight="700" letter-spacing="0.041em"><tspan x="0" y="23">Live Events</tspan></text>
+    <text id="preparing_for_Watch-to-earn" data-name="preparing for Watch-to-earn" transform="translate(1188.458 285.358)" fill="#fff" font-size="24" font-family="Montserrat-Bold, Montserrat" font-weight="700" letter-spacing="0.041em"><tspan x="0" y="23">preparing for </tspan><tspan x="0" y="52">Watch-to-earn</tspan></text>
+    <text id="preparing_for_Watch-to-earn-2" data-name="preparing for Watch-to-earn" transform="translate(1188.458 353.5)" fill="#fff" font-size="24" font-family="Montserrat-Bold, Montserrat" font-weight="700" letter-spacing="0.041em"><tspan x="0" y="23">preparing for </tspan><tspan x="0" y="52">Watch-to-earn</tspan></text>
+    <text id="Public_Sale" data-name="Public Sale" transform="translate(163 300.5)" fill="#fff" font-size="24" font-family="Montserrat-Bold, Montserrat" font-weight="700" letter-spacing="0.041em"><tspan x="0" y="23">Public Sale</tspan></text>
+    <text id="App_beta_v1" data-name="App beta v1" transform="translate(163 356.5)" fill="#fff" font-size="24" font-family="Montserrat-Bold, Montserrat" font-weight="700" letter-spacing="0.041em"><tspan x="0" y="23">App beta v1</tspan></text>
+    <text id="Partnership_with_celbs" data-name="Partnership with celbs" transform="translate(163 411.5)" fill="#fff" font-size="24" font-family="Montserrat-Bold, Montserrat" font-weight="700" letter-spacing="0.041em"><tspan x="0" y="23">Partnership </tspan><tspan x="0" y="52">with celbs</tspan></text>
+  </g>
+</svg>
