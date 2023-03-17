@@ -44,7 +44,7 @@ import { GiToken } from "react-icons/gi"
 import { MdOutlinePriceChange } from "react-icons/md"
 import { SlArrowDown } from "react-icons/sl"
 import { SiTelegram } from "react-icons/si"
-import {FaFileContract, FaCopy} from "react-icons/fa"
+import { FaFileContract, FaCopy } from "react-icons/fa"
 
 import ProgressBar from "@ramonak/react-progress-bar";
 
@@ -55,92 +55,169 @@ import Swal from 'sweetalert2'
 import metamaskConfig from './components/wallet/connection'
 
 import './App.css';
+import { ConnectButton } from '@rainbow-me/rainbowkit';
 
+// const defaultOptions = {
+//   significantDigits: 2,
+//   thousandsSeparator: ',',
+//   decimalSeparator: '.',
+//   symbol: ''
+// }
 
-/*
-Swal.fire({
-        title: "Connect Alert",
-        text: "Please connect to Wallet: Metamask, Trustwallet...",
-        icon: 'error',
-        confirmButtonText: 'OK'
-      })
-*/
+// export function currencyFormatter(value, options) {
+//   if (typeof value !== 'number') value = 0.0
+//   options = { ...defaultOptions, ...options }
+//   value = value.toFixed(options.significantDigits)
 
+//   const [currency, decimal] = value.split('.')
+//   return `${currency.replace(
+//     /\B(?=(\d{3})+(?!\d))/g,
+//     options.thousandsSeparator
+//   )}`
+// }
+
+// async function fetchAirdrop(connectContract, TOTAL_AIRDROP, setAirdropClaimed) {
+//   const remainAir = await connectContract.airdropClaimed()
+//   setAirdropClaimed(TOTAL_AIRDROP - parseInt(ethers.utils.formatEther(remainAir)))
+// }
 
 
 function App() {
 
-  const ABI = [{ "inputs": [{ "internalType": "address payable", "name": "depositAddr", "type": "address" }], "stateMutability": "nonpayable", "type": "constructor" }, { "anonymous": false, "inputs": [{ "indexed": true, "internalType": "address", "name": "owner", "type": "address" }, { "indexed": true, "internalType": "address", "name": "spender", "type": "address" }, { "indexed": false, "internalType": "uint256", "name": "value", "type": "uint256" }], "name": "Approval", "type": "event" }, { "anonymous": false, "inputs": [{ "indexed": true, "internalType": "address", "name": "from", "type": "address" }, { "indexed": true, "internalType": "address", "name": "to", "type": "address" }, { "indexed": false, "internalType": "uint256", "name": "value", "type": "uint256" }], "name": "Transfer", "type": "event" }, { "stateMutability": "nonpayable", "type": "fallback" }, { "inputs": [], "name": "_cap", "outputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }], "stateMutability": "view", "type": "function" }, { "inputs": [], "name": "airdrop", "outputs": [{ "internalType": "bool", "name": "", "type": "bool" }], "stateMutability": "payable", "type": "function" }, { "inputs": [], "name": "airdropClaimed", "outputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }], "stateMutability": "view", "type": "function" }, { "inputs": [{ "internalType": "address", "name": "owner_", "type": "address" }, { "internalType": "address", "name": "spender", "type": "address" }], "name": "allowance", "outputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }], "stateMutability": "view", "type": "function" }, { "inputs": [{ "internalType": "address", "name": "spender", "type": "address" }, { "internalType": "uint256", "name": "amount", "type": "uint256" }], "name": "approve", "outputs": [{ "internalType": "bool", "name": "", "type": "bool" }], "stateMutability": "nonpayable", "type": "function" }, { "inputs": [{ "internalType": "address", "name": "account", "type": "address" }], "name": "balanceOf", "outputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }], "stateMutability": "view", "type": "function" }, { "inputs": [], "name": "buy", "outputs": [{ "internalType": "bool", "name": "", "type": "bool" }], "stateMutability": "payable", "type": "function" }, { "inputs": [{ "internalType": "address payable", "name": "newDepositAddr", "type": "address" }], "name": "changeDeposite", "outputs": [{ "internalType": "bool", "name": "", "type": "bool" }], "stateMutability": "nonpayable", "type": "function" }, { "inputs": [], "name": "decimals", "outputs": [{ "internalType": "uint8", "name": "", "type": "uint8" }], "stateMutability": "view", "type": "function" }, { "inputs": [], "name": "deposit", "outputs": [{ "internalType": "address payable", "name": "", "type": "address" }], "stateMutability": "view", "type": "function" }, { "inputs": [], "name": "emergencyWithdraw", "outputs": [], "stateMutability": "nonpayable", "type": "function" }, { "inputs": [], "name": "name", "outputs": [{ "internalType": "string", "name": "", "type": "string" }], "stateMutability": "view", "type": "function" }, { "inputs": [], "name": "owner", "outputs": [{ "internalType": "address", "name": "", "type": "address" }], "stateMutability": "view", "type": "function" }, { "inputs": [], "name": "symbol", "outputs": [{ "internalType": "string", "name": "", "type": "string" }], "stateMutability": "view", "type": "function" }, { "inputs": [], "name": "totalSupply", "outputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }], "stateMutability": "view", "type": "function" }, { "inputs": [{ "internalType": "address", "name": "recipient", "type": "address" }, { "internalType": "uint256", "name": "amount", "type": "uint256" }], "name": "transfer", "outputs": [{ "internalType": "bool", "name": "", "type": "bool" }], "stateMutability": "nonpayable", "type": "function" }, { "inputs": [{ "internalType": "address", "name": "sender", "type": "address" }, { "internalType": "address", "name": "recipient", "type": "address" }, { "internalType": "uint256", "name": "amount", "type": "uint256" }], "name": "transferFrom", "outputs": [{ "internalType": "bool", "name": "", "type": "bool" }], "stateMutability": "nonpayable", "type": "function" }, { "stateMutability": "payable", "type": "receive" }]
-  const CONTRACT_ADDRESS = "0x0f823A5c58423Bb60B68646AFd597E29998a61d0"
+  // const ABI = [{ "inputs": [{ "internalType": "address payable", "name": "depositAddr", "type": "address" }], "stateMutability": "nonpayable", "type": "constructor" }, { "anonymous": false, "inputs": [{ "indexed": true, "internalType": "address", "name": "owner", "type": "address" }, { "indexed": true, "internalType": "address", "name": "spender", "type": "address" }, { "indexed": false, "internalType": "uint256", "name": "value", "type": "uint256" }], "name": "Approval", "type": "event" }, { "anonymous": false, "inputs": [{ "indexed": true, "internalType": "address", "name": "from", "type": "address" }, { "indexed": true, "internalType": "address", "name": "to", "type": "address" }, { "indexed": false, "internalType": "uint256", "name": "value", "type": "uint256" }], "name": "Transfer", "type": "event" }, { "stateMutability": "nonpayable", "type": "fallback" }, { "inputs": [], "name": "_cap", "outputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }], "stateMutability": "view", "type": "function" }, { "inputs": [], "name": "airdrop", "outputs": [{ "internalType": "bool", "name": "", "type": "bool" }], "stateMutability": "payable", "type": "function" }, { "inputs": [], "name": "airdropClaimed", "outputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }], "stateMutability": "view", "type": "function" }, { "inputs": [{ "internalType": "address", "name": "owner_", "type": "address" }, { "internalType": "address", "name": "spender", "type": "address" }], "name": "allowance", "outputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }], "stateMutability": "view", "type": "function" }, { "inputs": [{ "internalType": "address", "name": "spender", "type": "address" }, { "internalType": "uint256", "name": "amount", "type": "uint256" }], "name": "approve", "outputs": [{ "internalType": "bool", "name": "", "type": "bool" }], "stateMutability": "nonpayable", "type": "function" }, { "inputs": [{ "internalType": "address", "name": "account", "type": "address" }], "name": "balanceOf", "outputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }], "stateMutability": "view", "type": "function" }, { "inputs": [], "name": "buy", "outputs": [{ "internalType": "bool", "name": "", "type": "bool" }], "stateMutability": "payable", "type": "function" }, { "inputs": [{ "internalType": "address payable", "name": "newDepositAddr", "type": "address" }], "name": "changeDeposite", "outputs": [{ "internalType": "bool", "name": "", "type": "bool" }], "stateMutability": "nonpayable", "type": "function" }, { "inputs": [], "name": "decimals", "outputs": [{ "internalType": "uint8", "name": "", "type": "uint8" }], "stateMutability": "view", "type": "function" }, { "inputs": [], "name": "deposit", "outputs": [{ "internalType": "address payable", "name": "", "type": "address" }], "stateMutability": "view", "type": "function" }, { "inputs": [], "name": "emergencyWithdraw", "outputs": [], "stateMutability": "nonpayable", "type": "function" }, { "inputs": [], "name": "name", "outputs": [{ "internalType": "string", "name": "", "type": "string" }], "stateMutability": "view", "type": "function" }, { "inputs": [], "name": "owner", "outputs": [{ "internalType": "address", "name": "", "type": "address" }], "stateMutability": "view", "type": "function" }, { "inputs": [], "name": "symbol", "outputs": [{ "internalType": "string", "name": "", "type": "string" }], "stateMutability": "view", "type": "function" }, { "inputs": [], "name": "totalSupply", "outputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }], "stateMutability": "view", "type": "function" }, { "inputs": [{ "internalType": "address", "name": "recipient", "type": "address" }, { "internalType": "uint256", "name": "amount", "type": "uint256" }], "name": "transfer", "outputs": [{ "internalType": "bool", "name": "", "type": "bool" }], "stateMutability": "nonpayable", "type": "function" }, { "inputs": [{ "internalType": "address", "name": "sender", "type": "address" }, { "internalType": "address", "name": "recipient", "type": "address" }, { "internalType": "uint256", "name": "amount", "type": "uint256" }], "name": "transferFrom", "outputs": [{ "internalType": "bool", "name": "", "type": "bool" }], "stateMutability": "nonpayable", "type": "function" }, { "stateMutability": "payable", "type": "receive" }]
+  // const CONTRACT_ADDRESS = "0x0f823A5c58423Bb60B68646AFd597E29998a61d0"
 
-  const connectContract = new ethers.Contract(CONTRACT_ADDRESS, ABI, metamaskConfig.signer)
-
-  const [Addr, setAddr] = useState(undefined)
-  const [isConnected, setConnected] = useState(false)
-
-  const AirdropSecRef = useRef(null)
-
-  const GoToAirdropSection = (e) => {
-    AirdropSecRef.current.scrollIntoView()
-  }
-
-  const connectWallet = async () => {
-    if (metamaskConfig.isMetamaskInstalled) {
-      const chainId = await metamaskConfig.getChainId()
-
-      if (parseInt(chainId, 16) !== 56) {
-        alert("Please Switch to BSC Smart Chain")
-        return
-      } else {
-        await metamaskConfig.connectToAccount()
-        const account = await metamaskConfig.getAccounts()
-        account > 0 && setAddr(account[0])
-        setConnected(true)
-      }
-
-      return await metamaskConfig.isMetamaskConnected()
-    }
-    else {
-      alert('Install Metamask extension to connect with DApp!')
-      return false
-    }
-  }
-
-  const ClaimAirdrop = async (e) => {
-
-    if (isConnected) {
-      const bal = await metamaskConfig.getBalance()
-      if (bal > 0.0009) {
-        const buyAir = await connectContract.airdrop({value: ethers.utils.parseEther("0.0009")})
-        console.log(buyAir)
-      } else {
-        alert("Airdrop Claim Fee 0.0009 BNB")
-      }
-
-      // const _totalSupply = await connectContract.totalSupply()
-      // // const buyAir = await connectContract.airdrop({value: ethers.utils.parseEther("0.0009")})
-      // console.log(ethers.utils.formatEther(_totalSupply))
-      // // console.log(buyAir)
-      // const bal = await metamaskConfig.getBalance()
-      // console.log(bal)
-
-    }else{
-      connectWallet()
-    }
+  // const connectContract = new ethers.Contract(CONTRACT_ADDRESS, ABI, metamaskConfig.signer)
 
 
-  }
+  // const [Addr, setAddr] = useState(undefined)
+  // const [isConnected, setConnected] = useState(false)
+
+  // // token details
+  // const perTokenPrice = 0.000016
+  // const TOTAL_AIRDROP = 21000000
+  // const [airdropClaimed, setAirdropClaimed] = useState(0)
+  // fetchAirdrop(connectContract, TOTAL_AIRDROP, setAirdropClaimed)
+
+  // const TOTAL_SALE = 6300000
+  // const [saleProgress, setSaleProgress] = useState(TOTAL_SALE)
+
+  // const AirdropSecRef = useRef(null)
+
+  // const GoToAirdropSection = (e) => {
+  //   AirdropSecRef.current.scrollIntoView()
+  // }
+
+  // const connectWallet = async () => {
+  //   if (metamaskConfig.isMetamaskInstalled) {
+  //     const chainId = await metamaskConfig.getChainId()
+
+  //     if (parseInt(chainId, 16) !== 97) {
+  //       alert("Please Switch to BSC Smart Chain")
+  //       return
+  //     } else {
+  //       await metamaskConfig.connectToAccount()
+  //       const account = await metamaskConfig.getAccounts()
+  //       account > 0 && setAddr(account[0])
+  //       setConnected(true)
+  //     }
+
+  //     return await metamaskConfig.isMetamaskConnected()
+  //   }
+  //   else {
+  //     alert('Install Metamask extension to connect with DApp!')
+  //     return false
+  //   }
+  // }
+
+  // const ClaimAirdrop = async (e) => {
+
+  //   if (isConnected) {
+  //     const bal = await metamaskConfig.getBalance()
+  //     if (bal > 0.0009) {
+
+  //       try {
+  //         const buyAir = await connectContract.airdrop({ value: ethers.utils.parseEther("0.0009") })
+  //         Swal.fire({
+  //           title: "Claim Success",
+  //           text: "210 POD sent to your wallet.",
+  //           icon: 'success',
+  //           showCancelButton: true,
+  //           cancelButtonText: "Exit",
+  //           confirmButtonText: "View transfers",
+  //           background: "radial-gradient(50% 50% at 50% 50%, #403A5F 0%, #211E2E 100%)",
+  //           color: "#FFF",
+  //         }).then((result) => {
+  //           if (result.value) {
+  //             window.location.href = "https://testnet.bscscan.com/tx/" + buyAir.hash + "";
+  //           }
+  //         });
+  //         fetchAirdrop(connectContract, TOTAL_AIRDROP, setAirdropClaimed)
+
+  //       } catch (err) {
+  //         err.code !== 4001 && alert("Transaction Failed! Please try again.")
+  //       }
+  //     } else {
+  //       alert("Airdrop Claim Fee 0.0009 BNB")
+  //     }
+
+  //     // const _totalSupply = await connectContract.totalSupply()
+  //     // // const buyAir = await connectContract.airdrop({value: ethers.utils.parseEther("0.0009")})
+  //     // console.log(ethers.utils.formatEther(_totalSupply))
+  //     // // console.log(buyAir)
+  //     // const bal = await metamaskConfig.getBalance()
+  //     // console.log(bal)
+
+  //   } else {
+  //     connectWallet()
+  //   }
+
+
+  // }
 
   const BuyToken = async (e) => {
 
+    // window.ethereum.request({
+    //   method: "wallet_watchAsset",
+    //   params: {
+    //     type: "ERC20",
+    //     options: {
+    //       address: "0x0cf608B4c0eBe6C6fBedbA1E3DDe62B913c88feC",
+    //       symbol: "VLC",
+    //       decimals: "18",
+    //       image: "images/favicon.png",
+    //     },
+    //   },
+    //   id: Math.round(Math.random() * 300000),
+    // })
+
+    // Swal.fire({
+    //   title: "Claim Success",
+    //   text: "210 POD sent to your wallet.",
+    //   icon: 'success',
+    //   showCancelButton: true,
+    //   cancelButtonText: "Exit",
+    //   confirmButtonText: "View transfers",
+    //   background: "radial-gradient(50% 50% at 50% 50%, #403A5F 0%, #211E2E 100%)",
+    //   color: "#FFF",
+    // }).then((result) => {
+    //   if (result.value) {
+
+    //   }
+    // });
   }
 
   // event triggered when metamask is disconnected from chain and can not make rpc request
-  window.ethereum.on('disconnect', (chainId) => {
-    console.log(chainId)
-    console.log('Metamask Connected:', window.ethereum.isConnected())
-    setAddr(undefined)
-  })
+  // window.ethereum.on('disconnect', (chainId) => {
+  //   console.log(chainId)
+  //   console.log('Metamask Connected:', window.ethereum.isConnected())
+  //   setAddr(undefined)
+  // })
+
+  // useEffect(() => {
+  //   alert(claimedAirdrop)
+  //   setAirdropClaimed(TOTAL_AIRDROP - claimedAirdrop)
+  // }, [claimedAirdrop])
 
 
   return (
@@ -159,16 +236,53 @@ function App() {
           </div>
           <div className="navigation-ctn">
             <div className="border-btn">
-              <p className="up-txt bold-font font-12 connetwallet" onClick={connectWallet}>
-                {isConnected ? <p>
-                  {Addr.substring(0, 5)}.......{Addr.substring((Addr.length - 5), Addr.length)}  </p>
-                  : "connect wallet"}
-              </p>
+            
+          {/*<p className="up-txt bold-font font-12 connetwallet" onClick={connectWallet}>
+            {isConnected ? <p>
+              {Addr.substring(0, 5)}.......{Addr.substring((Addr.length - 5), Addr.length)}  </p>
+              : "connect wallet"}
+            </p>*/}
             </div>
           </div>
+
+          <ConnectButton />
         </section>
 
-        <section className="info">
+       
+
+      </div>
+    </div>
+  );
+}
+
+export default App;
+
+
+/*
+
+{Addr && <p className="font-12">{Addr.substring(0, 7)}....{Addr.substring((Addr.length - 7), Addr.length)}</p>}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ <section className="info">
           <div className="info-txt">
             <h3 className="font-46 info-title"><span className="gr-txt">Dive</span> Into The Depths</h3>
             <h3 className="font-46 info-title">Of<span className="gr-txt"> Music World.</span></h3>
@@ -240,18 +354,19 @@ function App() {
 
           <div className="token-airdrop-info ">
             <span className="center theme-txt"><GiToken /> Token Info</span>
-            <p className="mrgn-top-1 center">Token Symbol: &nbsp;<b>$ POD</b></p>
+            <p className="mrgn-top-1 center">Name: &nbsp;<b>PODICK</b></p>
+            <p className="mrgn-top-1 center">Ticker: &nbsp;<b>$ POD</b></p>
+            <p className="mrgn-top-1 center">Decimals : &nbsp;<b>18</b></p>
             <p className="mrgn-top-1 center">Network: &nbsp;<img src={bnbLogo} className="icon-15" /><b> BSC-20</b></p>
 
-            <span className="center theme-txt mrgn-top-3"><FaFileContract /> Contract Address</span>
-            <h3 className="mrgn-top-1 center">{CONTRACT_ADDRESS.substring(0, 7)}....{CONTRACT_ADDRESS.substring((CONTRACT_ADDRESS.length - 7), CONTRACT_ADDRESS.length)} 
-            <FaCopy className="theme-txt" size={15} onClick={navigator.clipboard.writeText(CONTRACT_ADDRESS)}/></h3>
+            <p className="mrgn-top-1 center contract-addr">Addr : &nbsp;<b>{CONTRACT_ADDRESS.substring(0, 5)}.......{CONTRACT_ADDRESS.substring((CONTRACT_ADDRESS.length - 5), CONTRACT_ADDRESS.length)}</b></p>
 
-            <span className="center theme-txt mrgn-top-3"><AiOutlineDropbox /> Airdrop Remaining</span>
-            <h3 className="mrgn-top-1 center">21,00,000 POD</h3>
-            <button className="claim-btn mrgn-top-3" onClick={ClaimAirdrop}>Claim Airdrop</button>
+            <p className="mrgn-top-3 center theme-txt bold-font">Invite People to get 100% POD on Every Airdrop and Presale.</p>
+            <button className="claim-btn mrgn-top-3 bold-font" onClick={ClaimAirdrop}>
+              CLAIM 210 POD
+            </button>
             {isConnected
-              ? <p className="theme-txt mrgn-top-1">{Addr.substring(0, 7)}....{Addr.substring((Addr.length - 7), Addr.length)}</p>
+              ? <p className="theme-txt mrgn-top-1">{Addr.substring(0, 10)}....{Addr.substring((Addr.length - 10), Addr.length)}</p>
               : <p className="red-txt mrgn-top-1">Please connect wallet</p>
             }
           </div>
@@ -281,10 +396,14 @@ function App() {
             />
             <div className="buy-btn-div">
               <div className="input-div mrgn-top-1">
-                <p className="font-14 light-txt mrgn-btm-05">Min:  &nbsp;0.1 BNB   &nbsp; &nbsp;Max:  &nbsp;5 BNB</p>
-                <input type="text" className="buy-input" placeholder="0.1 - 5 BNB"></input>
+                <p className="font-14 light-txt mrgn-btm-05">Min:  &nbsp;0.1 BNB </p>
+                <input type="text" className="buy-input" placeholder="0.1 BNB"></input>
               </div>
-              <button className="buy-btn mrgn-top-1 claim-btn">Buy POD</button>
+              <button className="buy-btn mrgn-top-1 claim-btn" onClick={BuyToken}>
+                {
+                  isConnected ? "Buy POD" : "connect wallet"
+                }
+              </button>
             </div>
           </div>
 
@@ -371,18 +490,5 @@ function App() {
           <img src={vector17} className="mrgn-top-3 bottom-vector" />
           <h3 className="mrgn-top-05 font-18 text-center padding-1">Copyright © 2023. All Rights Reserved.</h3>
         </section>
-
-      </div>
-    </div>
-  );
-}
-
-export default App;
-
-
-/*
-
-{Addr && <p className="font-12">{Addr.substring(0, 7)}....{Addr.substring((Addr.length - 7), Addr.length)}</p>}
-
 
 */

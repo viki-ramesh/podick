@@ -159,11 +159,9 @@
 .search-ctn {
   display: flex;
   align-items: center;
-
 }
 
 .hr-line-div {
-
   margin-left: auto;
   width: 0px;
   height: 116.5px;
@@ -198,6 +196,8 @@
 }
 
 /* ============buy airdrop =================== */
+
+
 .buy-airdrop {
   margin-top: 2rem;
   width: 100%;
@@ -207,7 +207,7 @@
   border-radius: 100px;
   border: 1px solid #C0B7E8;
   display: grid;
-  grid-template-columns: 0.8fr 1fr 1.5fr;
+  grid-template-columns: 0.8fr 1.1fr 1.1fr;
   gap: 0.5rem;
 }
 
@@ -217,14 +217,12 @@
   border-radius: 100px 0 0 100px;
   padding: 3rem;
   border-right: 1px solid #C0B7E8;
-
 }
 
 .token-airdrop-info {
   width: 100%;
   padding: 3rem;
   border-right: 1px solid #C0B7E8;
-
 }
 
 .token-sale-ctn {
@@ -500,7 +498,7 @@
 
 
 /* ================================================ */
-@media screen and (max-width:1080px){
+@media screen and (max-width:1080px) {
 
 
   /* =============== vectors ================= */
@@ -641,6 +639,13 @@
   }
 
   /* ============buy airdrop =================== */
+
+  .contract-addr {
+    width: 100%;
+    text-align: center;
+    border: 1px solid red;
+  }
+
   .buy-airdrop {
     border-radius: 10px;
     display: flex;
